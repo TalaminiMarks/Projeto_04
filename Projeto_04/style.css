@@ -1,0 +1,572 @@
+/*=== GERAL ===*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+:root{
+    font-size: 62.5%; 
+
+    --color-font: hsl(0, 0%, 71%);
+    --title-color: hsl(204, 17%, 49%);
+    --trat-color: hsl(0, 0%, 45%);
+
+    --servicos1: hsl(204, 17%, 49%);
+    --servicos2: hsl(204, 15%, 40%);
+}
+
+html body{
+    height: 100%;
+}
+
+.center{
+    max-width: 140rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
+/*=== HEADER ===*/
+
+header{
+    padding: 2rem 2%;
+}
+
+header .logo img{
+    float: left;
+}
+
+header nav.menu-desktop ul{
+    float: right;
+    list-style-type: none;
+    padding: 1rem 0;
+}
+
+header nav.menu-desktop ul li{
+    float: left;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--color-font);
+}
+
+header nav ul li a:hover{
+    font-weight: bold;
+}
+
+header nav.menu-mobile{
+    display: none;
+    float: right;
+    background-image: url("images/menu-mobile.png");
+    background-size: 100% 100%;
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+}
+
+header nav.menu-mobile ul{
+    display: none;
+    z-index: 9;
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    background-color: #eee;
+}
+
+header nav.menu-mobile ul li{
+    text-transform: uppercase;
+    padding: 2rem 0;
+}
+
+/*=== SECTION.MOSAICO ===*/
+
+section.mosaico .mosaico-wrapper{
+    float: left;
+    width: calc(100% / 6);
+}
+
+section.mosaico .mosaico-single{
+    width: 100%;
+    padding-top: 100%;
+    background-color: #ccc;
+    border: 5px solid white;
+    
+}
+
+/*=== SECTION.SERVICOS ===*/
+
+section.servicos .center{
+    max-width: 90rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -4rem;
+
+    text-align: center;
+}
+
+section.servicos .box-servico h2{
+    color: white;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+section.servicos .box-servico p{
+    color: white;
+    margin-top: 1rem;
+    padding-inline: 1rem;
+    font-size: 1.2rem;
+}
+
+section.servicos .box-servico:nth-of-type(1),
+section.servicos .box-servico:nth-of-type(3){
+    width: 30%;
+    padding: 3.7rem 0;
+    background-color: var(--servicos2);
+    background-image: url(images/icone_dente.png);
+    background-repeat: no-repeat;
+    background-position: center calc(100% - 1rem);
+}
+
+section.servicos .box-servico:nth-of-type(2){
+    width: 50%;
+    padding: 7.5rem 0;
+    background-color: var(--servicos1);
+}
+
+/*=== SECTION.DESCRICAO ===*/
+
+section.descricao{
+    padding: 4rem 0;
+}
+
+section.descricao .center{
+    max-width: 90rem;
+}
+
+section.descricao .perfil-wrapper{
+    padding-top: 50%;
+    position: relative;
+}
+
+section.descricao .perfil-wrapper2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+section.descricao .img-perfil{
+    width: 40%;
+    height: 100%;
+    background-image: url('images/img_perfil.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+section.descricao .perfil{
+    width: 60%;
+    padding: 0 3rem;
+}
+
+section.descricao .perfil h2{
+    color: var(--title-color);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+section.descricao .perfil p{
+    color: var(--color-font);
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+/*=== SECTION.GALERIA ===*/
+
+section.galeria{
+    padding: 5rem;
+}
+
+section.galeria .box-video{
+    float: left;
+    width: 33.3%;
+    position: relative;
+    border: 0.2rem solid white;
+    padding-top: calc(33.3% *0.6);
+}
+
+section.galeria .box-video iframe{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*=== SECTION.TRATAMENTOS ===*/
+
+section.tratamentos{
+    padding: 2rem 0;
+}
+
+section.tratamentos .center > h2{
+    text-align: center;
+    font-size: 3.4rem;
+    color: var(--title-color);
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+section.tratamentos .tratamento-container{
+    float: left;
+    width: 33.3%;
+}
+
+section.tratamentos .tratamento-single{
+    padding: 2rem;
+}
+
+section.tratamentos .tratamento-single h2{
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    color: var(--trat-color);
+}
+
+section.tratamentos .tratamento-single p{
+    color: var(--color-font);
+    font-size: 1.4rem;
+}
+
+/*=== SECTION.TRATAMENTOS ===*/
+
+section.depoimentos .center > h2{
+    text-align: center;
+    font-size: 3.4rem;
+    color: var(--title-color);
+    padding-bottom: 8rem;
+    text-transform: uppercase;
+}
+
+section.depoimentos .depoimento{
+    padding: 5rem;
+
+    border: 2px solid #ccc;
+    border-radius: 15px;
+}
+
+section.depoimentos .center{
+    text-align: center;
+    padding: 5rem 0;
+    max-width: 50rem;
+}
+
+section.depoimentos .depoimento-single{
+    padding: 0 2%;
+}
+
+section.depoimentos .depoimento-single quote{
+    font-size: 1.5rem;
+    color: var(--color-font);
+}
+
+section.depoimentos .nome-depoimento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+section.depoimentos .nome-depoimento span{
+    margin-left: 1rem;
+    color: var(--trat-color);
+}
+
+/*=== SECTION.SOCIAL ===*/
+
+section.social .instagram{
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 4rem 0;
+    background-color: hsl(205, 12%, 64%);
+}
+
+section.social .instagram p{
+    color: white;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+section.social .mosaico-social{
+    float: left;
+    width: 100%;
+}
+
+section.social .mosaico-social .img-mosaico-single-social{
+    float: left;
+    width: calc(100% / 8);
+    padding-top: calc(100% / 8);
+    background-color: #ccc;
+    border: 4px solid white;
+}
+
+section.social .fb{
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 4rem 0;
+    background-color: hsl(204, 15%, 40%)
+}
+
+section.social .fb p{
+    color: white;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+/*=== SECTION.CONTATO ===*/
+
+section.contato{
+    
+    padding: 6rem 0;
+}
+
+section.contato .center > h2{
+    font-size: 3.4rem;
+    color: var(--title-color);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section.contato form{
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+section.contato .form-wrapper{
+    float: left;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+section.contato span{
+    font-size: 1.5rem;
+    color: var(--color-font);
+}
+
+section.contato .form-wrapper input[type=text],
+section.contato .form-wrapper input[type=email],
+section.contato .form-wrapper input[type=tel]{
+    width: 100%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding-left: 1rem;
+    border: 1px solid hsl(0, 0%, 85%);
+    margin-top: 0.8rem;
+}
+
+section.contato .w100{
+    width: 100%;
+}
+
+section.contato .w50{
+    width: 50%;
+}
+
+section.contato .form-wrapper textarea{
+    width: 100%;
+    padding: 1rem;
+    resize: none;
+    height: 12.1rem;
+    margin-top: 1rem;
+    border: 1px solid hsl(0, 0%, 85%);
+}
+
+section.contato .form-wrapper input[type=submit]{
+    width: 10rem;
+    height: 3.5rem;
+    border: 0;
+    background-color: #688293;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/*=== FOOTER ===*/
+
+footer{
+    padding: 3rem 2%;
+    background-color: #688293;
+}
+
+footer .center{
+    max-width: 100rem;
+}
+
+footer .footer-block{
+    float: left;
+    width: 33.3%;
+}
+
+footer .footer-block h2{
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: normal;
+}
+
+footer .footer-block p{
+    font-size: 1.4rem;
+    color: white;
+}
+
+@media screen and (max-width: 1024px){
+    section.social .mosaico-social .img-mosaico-single-social{
+        width: calc(100% / 6);
+        padding-top: calc(100% / 6);
+    }
+
+    section.social .mosaico-social > div:nth-of-type(1n+7){
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    header .logo img{
+        width: 20rem;
+    }
+
+    header nav.menu-desktop{
+        display: none;
+    }
+
+    header nav.menu-mobile{
+        display: block;
+    }
+
+    section.servicos .center{
+        position: initial;
+        flex-direction: column;
+
+        padding-block: 2rem;
+    }
+
+    section.servicos .box-servico:nth-of-type(1),
+    section.servicos .box-servico:nth-of-type(3){
+        width: 70%;
+        padding: 4rem 0;
+    }
+
+    section.servicos .box-servico:nth-of-type(2){
+        width: 90%;
+        padding: 7.5rem 0;
+    }
+
+    section.descricao .perfil-wrapper{
+        padding-top: 1rem;
+    }
+
+    section.descricao .perfil-wrapper2{
+        display: inline-block;
+        text-align: center;
+        height: auto;
+        position: initial;
+    }
+    
+    section.descricao .img-perfil{
+        width: 50%;
+        padding-top: 60%;
+        height: auto;
+        display: inline-block;
+    }
+
+    section.descricao .perfil{
+        width: 90%;
+        display: inline-block;
+        padding-top: 2rem;
+        text-align: justify;
+    }
+
+    section.descricao .perfil h2{
+        text-align: center;
+    }
+
+    section.galeria{
+        text-align: center;
+    }
+
+    section.galeria .box-video{
+        float: none;
+        display: inline-block;
+        width: 65%;
+        padding-top: calc(65% *0.6);
+    }
+
+    section.social .mosaico-social .img-mosaico-single-social{
+        width: calc(100% / 4);
+        padding-top: calc(100% / 4);
+    }
+
+    section.social .mosaico-social > div:nth-of-type(1n+5){
+        display: none;
+    }
+
+    footer .footer-block{
+        float: none;
+        width: 100%;
+        margin: 2.5rem 0;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 580px){
+
+    section.descricao .img-perfil{
+    width: 55%;
+    padding-top: 75%;
+    }
+
+    header nav ul li a{
+    font-size: 1.5rem;
+    }
+
+    section.galeria .box-video{
+    width: 100%;
+    padding-top: calc(100% *0.6);
+    }
+
+    section.social .mosaico-social .img-mosaico-single-social{
+        width: calc(100% / 3);
+        padding-top: calc(100% / 3);
+    }
+
+    section.social .mosaico-social > div:nth-of-type(1n+4){
+        display: none;
+    }
+}
+
+
+
